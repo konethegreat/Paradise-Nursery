@@ -6,43 +6,34 @@ const cartSlice = createSlice({
     items: [],
   },
   reducers: {
-    addToCart: (state, action) => {
+    addItem: (state, action) => {
       const plant = action.payload;
-      const existingItem = state.items.find((item) => item.id === plant.id);
-      if (existingItem) {
-        existingItem.quantity += 1;
+      const existing = state.items.find(item => item.id === plant.id);
+      if (existing) {
+        existing.quantity += 1;
       } else {
         state.items.push({ ...plant, quantity: 1 });
       }
     },
-    incrementQuantity: (state, action) => {
-      const id = action.payload;
-      const item = state.items.find((item) => item.id === id);
-      if (item) {
-        item.quantity += 1;
-      }
+    removeItem: (state, action) => {
+      state.items = state.items.filter(item => item.id !== action.payload);
     },
-    decrementQuantity: (state, action) => {
-      const id = action.payload;
-      const item = state.items.find((item) => item.id === id);
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const item = state.items.find(item => item.id === id);
       if (item) {
-        if (item.quantity === 1) {
-          state.items = state.items.filter((item) => item.id !== id);
+        if (quantity <= 0) {
+          state.items = state.items.filter(item => item.id !== id);
         } else {
-          item.quantity -= 1;
+          item.quantity = quantity;
         }
       }
-    },
-    removeFromCart: (state, action) => {
-      const id = action.payload;
-      state.items = state.items.filter((item) => item.id !== id);
     },
   },
 });
 
-export const { addToCart, incrementQuantity, decrementQuantity, removeFromCart } = cartSlice.actions;
+export const { addItem, removeItem, updateQuantity } = cartSlice.actions;
 
-// Selectors
 export const selectCartItems = (state) => state.cart.items;
 export const selectTotalQuantity = (state) =>
   state.cart.items.reduce((total, item) => total + item.quantity, 0);

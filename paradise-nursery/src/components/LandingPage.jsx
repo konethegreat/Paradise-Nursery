@@ -4,7 +4,7 @@ function LandingPage() {
   return (
     <div className="landing-page">
       <div className="landing-content">
-        <h1>🌿 Paradise Nursery</h1>
+        <h1>🌿 Paradise Nursery </h1>
         <p>
           Discover a world of lush, vibrant plants that bring life and beauty to your home.
           From air-purifying plants to aromatic herbs and stunning flowers, we have everything
