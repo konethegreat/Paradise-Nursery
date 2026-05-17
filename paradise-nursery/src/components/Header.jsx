@@ -7,10 +7,14 @@ function Header() {
 
   return (
     <header className="navbar">
+      <div className="navbar-brand">
+        <Link to="/" className="brand-name">🌿 Paradise Nursery</Link>
+      </div>
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/products">Plants</Link>
-        <Link to="/cart">
+        <Link to="/about">About Us</Link>
+        <Link to="/cart" className="cart-link">
           Cart 🛒
           {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
         </Link>

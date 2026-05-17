@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, selectCartItems } from '../redux/CartSlice';
 import plants from '../data/plants';
-import Header from './Header';
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -15,7 +14,6 @@ function ProductList() {
 
   return (
     <div>
-      <Header />
       <div className="product-page">
         <h1>Our Plants</h1>
         {categories.map((category) => (

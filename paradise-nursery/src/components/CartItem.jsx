@@ -22,19 +22,24 @@ function CartItem() {
   if (cartItems.length === 0) {
     return (
       <div className="cart-page">
-        <h2>Your Cart is Empty</h2>
-        <Link to="/products">
-          <button className="continue-shopping-btn">Continue Shopping</button>
-        </Link>
+        <div className="cart-empty">
+          <h1>🛒 Your Cart is Empty</h1>
+          <p>Looks like you haven't added any plants yet. Let's fix that!</p>
+          <Link to="/products">
+            <button className="continue-shopping-btn">Start Shopping</button>
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="cart-page">
-      <h2>Shopping Cart</h2>
-      <p>Total Items: {totalQuantity}</p>
-      <p>Total Cost: ${totalCost.toFixed(2)}</p>
+      <h1>🛒 Shopping Cart</h1>
+      <div style={{ background: 'white', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+        <p style={{ color: '#666', margin: '0.5rem 0' }}>Total Items: <strong style={{ color: '#2d6a4f', fontSize: '1.2rem' }}>{totalQuantity}</strong></p>
+        <p style={{ color: '#666', margin: '0.5rem 0' }}>Total Cost: <strong style={{ color: '#f4a261', fontSize: '1.3rem' }}>${totalCost.toFixed(2)}</strong></p>
+      </div>
 
       <div className="cart-items">
         {cartItems.map((item) => (
