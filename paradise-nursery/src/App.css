@@ -1,0 +1,23 @@
+.landing-page {
+  background-image: url('/background.jpg'); /* or an online URL */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-content {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.get-started-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
