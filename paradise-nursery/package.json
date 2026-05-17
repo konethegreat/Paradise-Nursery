@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://konethegreat.github.io/YOUR_REPO_NAME",
+  "homepage": "https://konethegreat.github.io/Paradise-Nursery",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
