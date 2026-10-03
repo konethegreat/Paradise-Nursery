@@ -23,6 +23,18 @@ A beautiful, modern e-commerce web application for browsing and purchasing house
 
 [konethegreat/e-plantShopping](https://github.com/konethegreat/e-plantShopping) contains the same application. All 18 commits of this repository are part of its history, and at that point (`bff1ee5`) the two source trees were identical. e-plantShopping then renamed `src/redux/CartSlice.js` to `CartSlice.jsx` (no content change) and added the fixes listed under "Known issues" below (the build, the About Us route and the locked dependencies), 24 tests, a CI workflow and a rewritten README. Both repositories set `homepage` in `package.json` to `https://konethegreat.github.io/e-plantShopping`. This repository is left as it was, apart from this README.
 
+## ⚠️ Known issues
+
+Found on 3 October 2026. Items 1 to 3, and the production part of item 4, are fixed in [e-plantShopping](https://github.com/konethegreat/e-plantShopping); they are left unfixed here on purpose (see "Relationship" above).
+
+1. **`npm run build` fails.** Checked on Windows (Node 26.8.1) and on Linux (Node 22.22.0). `src/App.css` sets the landing-page background to `url('/https://plantify.co.za/...')`; because of the leading `/`, Vite looks for a local file `/https:/plantify.co.za/...` and stops with `ENOENT`. `npm run deploy` runs the build first, so it fails the same way.
+2. **The landing-page background photo does not load, even in development.** The dev server answers the malformed URL with an HTML page instead of an image (checked with curl).
+3. **"About Us" shows a blank page.** The navigation link goes to `/about`, but `src/App.jsx` only has routes for `/`, `/products` and `/cart`, and `src/components/AboutUs.jsx` is not used anywhere. The browser console shows `No routes matched location "/about"`.
+4. **Dependencies with known advisories.** `npm audit` on the committed `package-lock.json` reports 14 vulnerabilities (1 low, 2 moderate, 11 high), two of them in the production dependencies `react-router` and `react-router-dom` (a fix is available with `npm audit fix`).
+5. **Photos are hot-linked** from 12 different third-party hosts. Their licence terms were not checked and the links can break.
+6. **No automated tests and no CI workflow.** The CSS has no media queries.
+7. **Unused files:** `src/components/LandingPage.jsx` and `src/components/Layout.jsx` (`src/App.jsx` defines its own landing page).
+
 ---
 
 ## ✨ Features
