@@ -118,20 +118,20 @@ Paradise-Nursery/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js 20.19+ or 22.12+ (the minimum Vite 8 declares). The commands below were run on Node 26.8.1 (Windows); the failing build was also run on Node 22.22.0 (Linux).
+- npm
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd paradise-nursery
+   git clone https://github.com/konethegreat/Paradise-Nursery.git
+   cd Paradise-Nursery
    ```
 
-2. **Install dependencies**
+2. **Install dependencies** (installs exactly what `package-lock.json` lists)
    ```bash
-   npm install
+   npm ci
    ```
 
 3. **Start the development server**
@@ -140,7 +140,7 @@ Paradise-Nursery/
    ```
 
 4. **Open your browser**
-   - Navigate to `http://localhost:5173`
+   - Open the URL Vite prints, normally `http://localhost:5173`
 
 ### Build for Production
 
@@ -148,16 +148,17 @@ Paradise-Nursery/
 npm run build
 ```
 
-The optimized build will be created in the `dist/` directory.
+This is meant to write the optimized build to `dist/`, but it currently fails with the error described under "Known issues". Use the maintained [e-plantShopping](https://github.com/konethegreat/e-plantShopping) if you need a working build.
 
 ---
 
 ## 📋 Available Scripts
 
-- `npm run dev` - Start development server with hot module replacement
-- `npm run build` - Create production build
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint to check code quality
+- `npm run dev` - Start development server with hot module replacement (works)
+- `npm run build` - Create production build (fails: see "Known issues")
+- `npm run preview` - Preview production build locally (needs a successful build first)
+- `npm run lint` - Run ESLint (passes)
+- `npm run deploy` - Build, then publish `dist/` to a `gh-pages` branch with the `gh-pages` tool. It fails at the build step and was not run.
 
 ---
 
