@@ -1,10 +1,10 @@
 # 🌿 Paradise Nursery
 
-A beautiful, modern e-commerce web application for browsing and purchasing houseplants. Paradise Nursery brings nature indoors with a handpicked selection of air-purifying plants, aromatic herbs, and stunning flowers.
+A demo plant-shop web application for browsing houseplants and filling a shopping cart. "Paradise Nursery" is the shop name used in the app; its catalogue has 15 plants in three categories: air-purifying plants, aromatic herbs and flowering plants.
 
-![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-764ABC?logo=redux)
-![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite)
 ![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?logo=css3)
 
 ## About this repository
