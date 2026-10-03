@@ -39,39 +39,34 @@ Found on 3 October 2026. Items 1 to 3, and the production part of item 4, are fi
 
 ## ✨ Features
 
+The catalogue and the cart are the same as in e-plantShopping, whose README has [screenshots](https://github.com/konethegreat/e-plantShopping#screenshots).
+
 ### 🏠 Landing Page
-- Eye-catching hero section with gradient background
-- Compelling call-to-action buttons
-- Easy navigation to explore plants and learn more about the company
+- Full-screen hero with a welcome message and a **Get Started** button that opens the plant catalogue (the background photo does not load in this copy; see "Known issues")
 
 ### 🌱 Plant Catalog
 - Browse plants organized by category:
   - **Air Purifying**: Snake Plant, Spider Plant, Pothos, Peace Lily, Dracaena
   - **Aromatic**: Lavender, Rosemary, Mint, Basil, Thyme
   - **Flowering**: Anthurium, African Violet, Orchid, Begonia, Geranium
-- Responsive grid layout with smooth hover effects
-- Detailed pricing information
-- Add to cart functionality with duplicate prevention
+- Grid of plant cards that reflows to the available width, with hover effects
+- Price shown for each plant
+- **Add to Cart** button per plant; once a plant is in the cart its button shows "Added" and is disabled
 
 ### 🛒 Shopping Cart
-- Add/remove items from cart
-- Adjust quantities with increment/decrement buttons
-- Real-time cart total and item count
-- Empty cart messaging with helpful guidance
-- Persistent cart badge in navigation
+- Add plants from the catalogue and remove them with **Delete**
+- **+** / **-** buttons change the quantity; decreasing it to 0 removes the plant
+- "Total Items" and "Total Amount" update as the cart changes
+- Shows "Your cart is empty." when there is nothing in the cart
+- The navigation bar shows a badge with the number of items in the cart; the cart lives in memory only and is lost when the page is reloaded
+- **Continue Shopping** returns to the catalogue; **Checkout** only shows a "Coming Soon!" alert
 
 ### 📖 About Us Page
-- Company mission and values
-- Historical background
-- Benefits and highlights
-- Professional design with organized sections
+- `src/components/AboutUs.jsx` holds a welcome sentence and a one-sentence mission statement, but the page cannot be reached in this copy because it has no route (see "Known issues")
 
-### 🎨 Modern UI/UX
-- Beautiful gradient design with green color scheme
-- Smooth animations and transitions
-- Responsive design for all screen sizes
-- Professional typography and spacing
-- Interactive hover effects and visual feedback
+### 🎨 Look and feel
+- Green colour scheme with a gradient navigation bar and gradient buttons
+- CSS transitions and hover effects on cards and buttons, a fade-in on the landing page and a pulsing cart badge
 
 ---
 
