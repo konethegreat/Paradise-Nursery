@@ -7,6 +7,22 @@ A beautiful, modern e-commerce web application for browsing and purchasing house
 ![Vite](https://img.shields.io/badge/Vite-Latest-646CFF?logo=vite)
 ![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?logo=css3)
 
+## About this repository
+
+> **Learning project, older copy.** A front-end exercise: a small plant-shop storefront built with React, Redux Toolkit and Vite. It is a demo, not a real shop: there is no backend, no accounts and no payments. The same code, with fixes, tests and CI, is maintained in **[konethegreat/e-plantShopping](https://github.com/konethegreat/e-plantShopping)**; use that repository.
+
+| | |
+| --- | --- |
+| **Status** | Superseded by [e-plantShopping](https://github.com/konethegreat/e-plantShopping) (see "Relationship" below). Kept for reference; not archived. |
+| **Origin** | IBM Skills Network publishes a starter template named `e-plantShopping` ([ibm-developer-skills-network/e-plantShopping](https://github.com/ibm-developer-skills-network/e-plantShopping), Apache-2.0). The component names (`ProductList`, `CartItem`, `AboutUs`) and the Redux reducer names (`addItem`, `removeItem`, `updateQuantity`) match that template, so this repository appears to be a solution to that exercise. It is **not** a GitHub fork and its history does not contain the template's files; the file layout, plant data, styling and routing differ from the template. |
+| **Authorship** | All 18 commits (17 May 2026) are authored by Kone Tshivhinda (`git log`). This README update (October 2026) was prepared with Claude (Anthropic); the code is unchanged. |
+| **Checks** | On 3 October 2026 (Node 26.8.1, Windows): `npm ci` and `npm run lint` pass, and in a scripted headless-browser run against the dev server the shopping flow works (catalogue, add to cart, totals). `npm run build` **fails** (see "Known issues"). There are no automated tests and no CI workflow. |
+| **Demo** | None hosted. |
+
+### Relationship to e-plantShopping
+
+[konethegreat/e-plantShopping](https://github.com/konethegreat/e-plantShopping) contains the same application. All 18 commits of this repository are part of its history, and at that point (`bff1ee5`) the two source trees were identical. e-plantShopping then renamed `src/redux/CartSlice.js` to `CartSlice.jsx` (no content change) and added the fixes listed under "Known issues" below (the build, the About Us route and the locked dependencies), 24 tests, a CI workflow and a rewritten README. Both repositories set `homepage` in `package.json` to `https://konethegreat.github.io/e-plantShopping`. This repository is left as it was, apart from this README.
+
 ---
 
 ## ✨ Features
