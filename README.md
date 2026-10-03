@@ -192,7 +192,7 @@ The navigation bar (Home, Plants, About Us, Cart) is shown on the catalogue and 
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Longer-term Ideas (not started)
 
 - User authentication & accounts
 - Product reviews and ratings
@@ -218,14 +218,10 @@ The navigation bar (Home, Plants, About Us, Cart) is shown on the catalogue and 
 
 This project is open source and available under the MIT License.
 
+No `LICENSE` file is included in the repository at the moment.
+
 ---
 
 ## 🤝 Support
 
-For questions or issues, please reach out or create an issue in the repository.
-
----
-
-**Made with 🌱 by the Paradise Nursery Team**
-
-Bringing nature home since 2015.
+For questions or issues, please create an issue in the repository.
